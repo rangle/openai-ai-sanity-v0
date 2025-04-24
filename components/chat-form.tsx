@@ -1,12 +1,13 @@
 "use client"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
-import { useChat } from "ai/react"
+import { useChat } from "@ai-sdk/react"
 import { ArrowUpIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { AutoResizeTextarea } from "@/components/autoresize-textarea"
 import { errorMessages } from "@/lib/errorMessages"
+import Image from "next/image"
 
 export function ChatForm({ className, ...props }: React.ComponentProps<"form">) {
   const [chatHistory, setChatHistory] = useState<{ role: string, content: string }[]>([]);
@@ -66,7 +67,10 @@ export function ChatForm({ className, ...props }: React.ComponentProps<"form">) 
       <h1 className="text-2xl font-semibold leading-none tracking-tight">Basic AI Chatbot + Sanity CMS Embeddings RAG Template</h1>
       <h2 className="text-muted-foreground text-lg">This chatbot uses Next.js, the Vercel AI SDK, and Sanity CMS embeddings with Retrieval-Augmented Generation (RAG) to generate responses from headless CMS content.</h2>
       <p className="text-muted-foreground text-base">
-        Connect API keys from your provider and Sanity CMS and send a message to get started. (You can update the prompt in the `/api/chat/route.ts` file.)
+        Connect API keys from your provider and Sanity CMS and send a message to get started.
+      </p>
+      <p className="text-muted-foreground text-base">
+        Change the prompt in the `/api/chat/route.ts` file (defaults to generating a LinkedIn post).
       </p>
       <p className="text-muted-foreground text-sm">This chatbot is based on shadcn's OpenAI and AI SDK Chatbot v0 template.</p>
     </header>
@@ -109,6 +113,15 @@ export function ChatForm({ className, ...props }: React.ComponentProps<"form">) 
         onSubmit={handleSubmit}
         className="border-input bg-background focus-within:ring-ring/10 relative mx-6 mb-6 flex items-center rounded-[16px] border px-3 py-1.5 pr-8 text-sm focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-0"
       >
+        <div className="flex items-center gap-2 mr-2">
+          <Image
+            src="/searchbar-icons.png"
+            alt="Next.js, OpenAI, Sanity logos"
+            width={80}
+            height={29}
+            className="object-contain"
+          />
+        </div>
         <AutoResizeTextarea
           onKeyDown={handleKeyDown}
           onChange={(v) => setInput(v)}
