@@ -67,13 +67,12 @@ export async function querySanity(
   if (Array.isArray(embeddingResults) && embeddingResults.length > 0) {
     // Filter out irrelevant results
     const filteredResults = embeddingResults.filter(
-      (res: any) => res.score >= 0.78
+      (res: any) => res.score >= 0.78 // Adjust this relevance threshold as needed
     );
     if (filteredResults.length === 0) {
       // If no results pass the threshold, return an empty array
       return [];
     }
-    console.log("filteredResults", filteredResults);
 
     // Extract document IDs (from the filtered results only)
     const documentIds = filteredResults.map(
@@ -122,7 +121,6 @@ export async function querySanity(
         document.blogTitle ||
         document.eventTitle ||
         "";
-      console.log(document.title);
       document._markdown = document?.content
         ? document.content
             .map(

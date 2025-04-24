@@ -46,7 +46,7 @@ export async function POST(req: Request) {
       - Use concise language
       - End with a clear call-to-action or thought-provoking insight
       - Reference specific points from the provided context
-      - Begin your response with "Context: " followed by the page URL and a brief summary of the context used, then start a new line for the LinkedIn post
+      - Begin your response with "Context: " followed by the name of the page and a brief summary of the context used, then start a new line for the LinkedIn post
       `,
     });
 
