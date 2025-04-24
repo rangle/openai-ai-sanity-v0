@@ -33,6 +33,7 @@ export async function POST(req: Request) {
 
     const result = await streamText({
       model: openai("gpt-4o-mini"),
+      // Edit the prompt to change the chatbot's behavior
       prompt: `You are a LinkedIn post writer that creates engaging content using frameworks like PAS (Problem, Agitate, Solve), ACCA (Awareness, Comprehension, Conviction, Action), or QUEST (Question, Unique, Explain, Story, Tie-back). 
   
       Context from website:

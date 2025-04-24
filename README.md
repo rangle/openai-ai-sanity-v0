@@ -1,5 +1,3 @@
-# LinkedIn Post Generator
-
 A web application based on shadcn's OpenAI and AI SDK Chatbot that generates engaging LinkedIn posts based on content from a Sanity CMS embeddings API. The application uses Vercel's AI SDK and OpenAI's API to create contextually relevant posts and provides a chat-like interface for users to interact with the content generation system.
 
 ## Prerequisites
@@ -61,7 +59,7 @@ The application will be available at `http://localhost:3000`.
   - `layout.tsx` - Root layout component
   - `page.tsx` - Main page component
   - `globals.css` - Global styles
-  - `/api/chat/route.ts` - API route for handling chat interactions with OpenAI and Sanity. You can edit the prompt here.
+  - `/api/chat/route.ts` - API route for handling chat interactions with OpenAI and Sanity. You can edit the prompt here (defaults to generating LinkedIn posts).
 - `/components` - React components
   - `chat-form.tsx` - Main chat interface component
   - `autoresize-textarea.tsx` - Auto-resizing textarea component

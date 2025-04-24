@@ -62,12 +62,13 @@ export function ChatForm({ className, ...props }: React.ComponentProps<"form">) 
   }
 
   const header = (
-    <header className="m-auto flex max-w-96 flex-col gap-5 text-center">
-      <h1 className="text-2xl font-semibold leading-none tracking-tight">LinkedIn Post Generator</h1>
-      <p className="text-muted-foreground text-sm">
-        Generate engaging LinkedIn posts based on Rangle's website content.
+    <header className="m-auto flex flex-col gap-5 text-center">
+      <h1 className="text-2xl font-semibold leading-none tracking-tight">Basic AI Chatbot + Sanity CMS Embeddings RAG Template</h1>
+      <h2 className="text-muted-foreground text-lg">This chatbot uses Next.js, the Vercel AI SDK, and Sanity CMS embeddings with Retrieval-Augmented Generation (RAG) to generate responses from headless CMS content.</h2>
+      <p className="text-muted-foreground text-base">
+        Connect API keys from your provider and Sanity CMS and send a message to get started.
       </p>
-      <p className="text-muted-foreground text-sm">Enter a topic related to get started.</p>
+      <p className="text-muted-foreground text-sm">This chatbot is based on shadcn's OpenAI and AI SDK Chatbot v0 template.</p>
     </header>
   )
 
@@ -112,7 +113,7 @@ export function ChatForm({ className, ...props }: React.ComponentProps<"form">) 
           onKeyDown={handleKeyDown}
           onChange={(v) => setInput(v)}
           value={input}
-          placeholder={isLoading ? "Searching through website content..." : chatHistory.length < 1 ? "What would you like to post about?" : "Follow-up or refresh the page to clear my head"}
+          placeholder={isLoading ? "Searching through website content..." : chatHistory.length < 1 ? "What would you like to talk about?" : "Follow-up or refresh the page to clear my head"}
           disabled={isLoading}
           className="placeholder:text-muted-foreground flex-1 bg-transparent focus:outline-none"
         />
