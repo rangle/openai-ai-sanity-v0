@@ -66,7 +66,7 @@ export function ChatForm({ className, ...props }: React.ComponentProps<"form">) 
       <h1 className="text-2xl font-semibold leading-none tracking-tight">Basic AI Chatbot + Sanity CMS Embeddings RAG Template</h1>
       <h2 className="text-muted-foreground text-lg">This chatbot uses Next.js, the Vercel AI SDK, and Sanity CMS embeddings with Retrieval-Augmented Generation (RAG) to generate responses from headless CMS content.</h2>
       <p className="text-muted-foreground text-base">
-        Connect API keys from your provider and Sanity CMS and send a message to get started.
+        Connect API keys from your provider and Sanity CMS and send a message to get started. (You can update the prompt in the `/api/chat/route.ts` file.)
       </p>
       <p className="text-muted-foreground text-sm">This chatbot is based on shadcn's OpenAI and AI SDK Chatbot v0 template.</p>
     </header>
