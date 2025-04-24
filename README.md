@@ -4,7 +4,7 @@ A web application based on shadcn's OpenAI and AI SDK Chatbot that generates eng
 
 Before you begin, ensure you have the following:
 
-- Node.js (v14 or later)
+- Node.js (v18+ recommended)
 - npm or yarn
 - Sanity CMS project, embeddings index, and API credentials
 - OpenAI API key
